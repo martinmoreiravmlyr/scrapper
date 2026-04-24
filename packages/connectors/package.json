@@ -4,7 +4,9 @@
   "type": "module",
   "main": "src/index.ts",
   "dependencies": {
-    "@uru-scraper/shared": "file:../shared"
+    "@uru-scraper/shared": "file:../shared",
+    "cheerio": "^1.0.0",
+    "puppeteer-core": "^24.0.0"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json --noEmit"

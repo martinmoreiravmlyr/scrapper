@@ -32,7 +32,7 @@ export function createStubConnector(
       return seedUrls;
     },
     async parseListingPage() {
-      return seedUrls;
+      return [];
     },
     async parseDetailPage(url: string) {
       assertValidUrl(url);

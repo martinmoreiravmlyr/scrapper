@@ -62,3 +62,5 @@ export function defaultQueueStates(): Record<QueueName, QueueStatus> {
     dedupe: "idle"
   };
 }
+
+export * from "./db";

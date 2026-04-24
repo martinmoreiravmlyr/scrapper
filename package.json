@@ -19,9 +19,15 @@
     "build": "npm --workspace @uru-scraper/web run build"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^22.10.1",
     "concurrently": "^9.0.1",
     "tsx": "^4.19.1",
     "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "cheerio": "^1.2.0",
+    "puppeteer-core": "^24.42.0"
   }
 }
