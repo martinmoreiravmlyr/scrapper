@@ -13,9 +13,15 @@
     "dev:api": "npm --workspace @uru-scraper/api run dev",
     "dev:web": "npm --workspace @uru-scraper/web run dev",
     "dev:workers": "npm --workspace @uru-scraper/workers run dev",
-    "dev": "concurrently \"npm:dev:api\" \"npm:dev:web\" \"npm:dev:workers\""
+    "dev": "concurrently \"npm:dev:api\" \"npm:dev:web\" \"npm:dev:workers\"",
+    "test": "node --import tsx --test \"apps/**/*.test.ts\" \"packages/**/*.test.ts\"",
+    "typecheck": "tsc -p apps/api/tsconfig.json --noEmit && tsc -p apps/workers/tsconfig.json --noEmit && tsc -p packages/connectors/tsconfig.json --noEmit && tsc -p packages/shared/tsconfig.json --noEmit",
+    "build": "npm --workspace @uru-scraper/web run build"
   },
   "devDependencies": {
-    "concurrently": "^9.0.1"
+    "@types/node": "^22.10.1",
+    "concurrently": "^9.0.1",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
   }
 }

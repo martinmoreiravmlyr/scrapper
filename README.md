@@ -31,6 +31,18 @@ npm run dev:web
 npm run dev:workers
 ```
 
+
+## Validación
+```bash
+npm test
+npm run typecheck
+npm run build
+```
+
+- `npm test`: corre tests unitarios de API y conectores con `node:test` + `tsx`.
+- `npm run typecheck`: valida TypeScript en apps y packages.
+- `npm run build`: genera el build de producción del dashboard web.
+
 ## Apps
 - `apps/web`: dashboard React + Vite
 - `apps/api`: API Fastify

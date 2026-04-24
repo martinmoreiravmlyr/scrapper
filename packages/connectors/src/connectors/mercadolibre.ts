@@ -3,5 +3,6 @@ import { createStubConnector } from "./base";
 export const mercadolibreConnector = createStubConnector(
   "mercadolibre",
   "api-first",
-  ["https://listado.mercadolibre.com.uy/casas"]
+  ["https://listado.mercadolibre.com.uy/casas"],
+  "Mercado Libre Inmuebles Uruguay"
 );
