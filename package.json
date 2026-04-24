@@ -14,8 +14,8 @@
     "dev:web": "npm --workspace @uru-scraper/web run dev",
     "dev:workers": "npm --workspace @uru-scraper/workers run dev",
     "dev": "concurrently \"npm:dev:api\" \"npm:dev:web\" \"npm:dev:workers\"",
-    "test": "node --import tsx --test \"apps/**/*.test.ts\" \"packages/**/*.test.ts\"",
-    "typecheck": "tsc -p apps/api/tsconfig.json --noEmit && tsc -p apps/workers/tsconfig.json --noEmit && tsc -p packages/connectors/tsconfig.json --noEmit && tsc -p packages/shared/tsconfig.json --noEmit",
+    "test": "node --import tsx --test \"api/**/*.test.ts\" \"apps/**/*.test.ts\" \"packages/**/*.test.ts\"",
+    "typecheck": "tsc -p apps/api/tsconfig.json --noEmit && tsc -p apps/workers/tsconfig.json --noEmit && tsc -p packages/connectors/tsconfig.json --noEmit && tsc -p packages/shared/tsconfig.json --noEmit && tsc --noEmit --target ES2022 --module ESNext --moduleResolution Bundler --strict --skipLibCheck api/*.ts",
     "build": "npm --workspace @uru-scraper/web run build"
   },
   "devDependencies": {
