@@ -41,6 +41,8 @@ Este monorepo debe desplegarse desde la raíz del repositorio. Configuración re
 - Output Directory: `apps/web/dist`
 - Install Command: `npm install`
 
+Si Vercel está configurado temporalmente con Root Directory `apps/api`, el build genera `apps/api/dist/index.html` para evitar el error de Output Directory, pero ese deploy es solo del workspace API y no del dashboard completo.
+
 El repo también define scripts `build` en los workspaces para que Vercel no falle si detecta un workspace individual durante la instalación/build.
 
 ## Validación
