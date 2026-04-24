@@ -7,6 +7,6 @@
     "@uru-scraper/shared": "file:../shared"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json --noEmit"
+    "build": "tsc -p tsconfig.build.json --noEmit"
   }
 }

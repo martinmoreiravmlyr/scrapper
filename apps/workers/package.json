@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "seed": "tsx src/seed.ts",
-    "build": "tsc -p tsconfig.json --noEmit"
+    "build": "tsc -p tsconfig.build.json --noEmit"
   },
   "dependencies": {
     "@uru-scraper/connectors": "file:../../packages/connectors",
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "tsx": "^4.19.1",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "@types/node": "^22.10.1"
   }
 }
