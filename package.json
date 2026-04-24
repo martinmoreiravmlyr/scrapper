@@ -1,0 +1,21 @@
+{
+  "name": "uru-scraper-starter",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "infra:up": "docker compose up -d postgres redis",
+    "infra:down": "docker compose down",
+    "dev:api": "npm --workspace @uru-scraper/api run dev",
+    "dev:web": "npm --workspace @uru-scraper/web run dev",
+    "dev:workers": "npm --workspace @uru-scraper/workers run dev",
+    "dev": "concurrently \"npm:dev:api\" \"npm:dev:web\" \"npm:dev:workers\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

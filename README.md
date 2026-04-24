@@ -1,0 +1,44 @@
+# URU Scraper Starter
+
+Starter monorepo para scraping inmobiliario en Uruguay.
+
+## Qué incluye
+- React + Vite para dashboard interno
+- API con Fastify
+- Workers base para crawling
+- PostgreSQL + Redis con Docker Compose
+- Conectores stub para:
+  - InfoCasas
+  - Gallito
+  - Casasweb
+  - REMAX Uruguay
+  - Casas y Más
+  - Mercado Libre
+- `plan.md` con roadmap completo
+
+## Requisitos
+- Node.js 20+
+- npm 10+
+- Docker Desktop
+
+## Arranque
+```bash
+npm install
+npm run bootstrap
+npm run infra:up
+npm run dev:api
+npm run dev:web
+npm run dev:workers
+```
+
+## Apps
+- `apps/web`: dashboard React + Vite
+- `apps/api`: API Fastify
+- `apps/workers`: workers BullMQ / seeds
+- `packages/connectors`: conectores por portal
+- `packages/shared`: tipos compartidos
+- `infra/sql`: esquema inicial PostgreSQL
+
+## Estado
+Esto es una base de trabajo lista para desarrollar.
+Los scrapers reales están stubbeados y se implementan siguiendo `plan.md`.
