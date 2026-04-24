@@ -5,5 +5,8 @@
   "main": "src/index.ts",
   "dependencies": {
     "@uru-scraper/shared": "file:../shared"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit"
   }
 }
