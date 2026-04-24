@@ -34,16 +34,16 @@ npm run dev:workers
 
 ## Deploy en Vercel
 
-Este monorepo debe desplegarse desde la raíz del repositorio. Configuración recomendada en Vercel:
+Este repositorio está configurado como monorepo. La configuración principal está en `vercel.json` en la raíz.
+
+Configuración recomendada en Vercel Project Settings:
 
 - Root Directory: `.`
 - Build Command: `npm run build`
 - Output Directory: `apps/web/dist`
 - Install Command: `npm install`
 
-Si Vercel está configurado temporalmente con Root Directory `apps/api`, el build genera `apps/api/dist/index.html` para evitar el error de Output Directory, pero ese deploy es solo del workspace API y no del dashboard completo.
-
-El repo también define scripts `build` en los workspaces para que Vercel no falle si detecta un workspace individual durante la instalación/build.
+También existe `apps/api/vercel.json` como shim defensivo: si el proyecto de Vercel quedó mal configurado con Root Directory `apps/api`, ese archivo delega el install/build a la raíz (`cd ../..`) y publica `apps/web/dist`. Aun así, la configuración correcta para el proyecto es Root Directory `.`.
 
 ## Validación
 ```bash
